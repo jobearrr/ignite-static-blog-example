@@ -21,5 +21,14 @@ struct HomePage: StaticPage {
         Text {
             "Hello, world!"
         }.font(.title1) // translates into h1 HTML tag
+        // Adds a spacer between the header and list of posts
+        Spacer()
+        // Group all post div tags into one tag
+        Group {
+            for content in context.content(ofType: "post") {
+                // Print each link to a post inside a separate div tag
+                Group { Link(content) }
+            }
+        }
     }
 }
