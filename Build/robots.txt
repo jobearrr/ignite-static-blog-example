@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: jobearrr.github.io/sitemap.xml
