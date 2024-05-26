@@ -22,6 +22,11 @@ struct Blog: Site {
     // Assign the previously created HomePage as homepage to your website
     var homePage = HomePage(title: "Home")
     
+    // Register all supported page layouts
+    var layouts: [any ContentPage] {
+        BlogPost()
+    }
+    
     // This is the new application's entry point
     static func main() async {
         let blog = Blog()
